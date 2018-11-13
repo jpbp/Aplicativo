@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,7 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void alteraText(View view)
     {
+        Random gerador = new Random();
+        String aux="numero escolhido: "+gerador.nextInt(11);
         TextView texto= findViewById(R.id.text);
-        texto.setText("mudança");
+        texto.setText(aux);
     }
 }
